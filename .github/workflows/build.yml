@@ -50,7 +50,10 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-
+          
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+        
       - name: Make plugin_repackaging.sh executable
         run: chmod +x ./plugin_repackaging.sh
 
