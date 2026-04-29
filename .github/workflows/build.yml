@@ -19,7 +19,9 @@ on:
         description: "Use ARM platform (true = manylinux_2_17_aarch64, false = manylinux_2_17_x86_64)"
         required: true
         default: "false"
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  
 jobs:
   repackage:
     runs-on: ubuntu-latest
